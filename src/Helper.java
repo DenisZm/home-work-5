@@ -21,8 +21,8 @@ class Helper {
     }
 
     static void printArray(int[] arr) {
-        for (int x: arr) {
-            System.out.printf("%4d ", x);
+        for (int anArr: arr) {
+            System.out.printf("%4d ", anArr);
         }
     }
 
@@ -33,21 +33,23 @@ class Helper {
         }
     }
 
-    static int[] generateRandomArray(int size, int start, int end) {
-        int range = end - start;
+    static int[] generateRandomArray(int size, int startRandom,
+                                     int endRandom) {
+        int range = endRandom - startRandom;
         int[] arr = new int[size];
 
         for (int i = 0; i < size; i++) {
-            arr[i] = (int) (Math.random() * range) + start;
+            arr[i] = (int) (Math.random() * range) + startRandom;
         }
         return arr;
     }
 
     static int[][] generateRandom2DArray(int width, int height,
-                                         int start_rand, int end_rand) {
+                                         int startRand, int endRand) {
         int[][] arr = new int[height][width];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = Helper.generateRandomArray(arr[i].length, start_rand, end_rand);
+            arr[i] = Helper.generateRandomArray(arr[i].length,
+                                                startRand, endRand);
         }
         return arr;
     }
@@ -70,13 +72,13 @@ class Helper {
     }
 
     static int findIndexOfMinInArray(int[] arr) {
-        int min = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[min] > arr[i]) {
-                min = i;
+        int minIndex = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[minIndex] > arr[i]) {
+                minIndex = i;
             }
         }
-        return min;
+        return minIndex;
     }
 
 }
