@@ -19,9 +19,10 @@ public class Ex5 {
 
     static int[] bubbleSort(int[] arr) {
         boolean swap;
+        int length = arr.length;
         do {
             swap = false;
-            for (int i = 0; i < arr.length - 1; i++) {
+            for (int i = 0; i < length - 1; i++) {
                 if (arr[i] > arr[i + 1]) {
                     int t = arr[i + 1];
                     arr[i + 1] = arr[i];
@@ -29,6 +30,7 @@ public class Ex5 {
                     swap = true;
                 }
             }
+            length--;
         } while (swap);
         return arr;
     }
