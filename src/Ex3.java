@@ -14,8 +14,8 @@ public class Ex3 {
         Helper.printArray(arr);
         System.out.println();
 
-        System.out.println("Index of minimal element: "
-                            + Helper.findIndexOfMinInArray(arr));
+        System.out.println("Index of maximal element: "
+                            + Helper.findIndexOfMaxInArray(arr));
     }
 
 }

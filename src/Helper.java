@@ -81,4 +81,14 @@ class Helper {
         return minIndex;
     }
 
+    static int findIndexOfMaxInArray(int[] arr) {
+        int maxIndex = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[maxIndex] < arr[i]) {
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
+    }
+
 }
