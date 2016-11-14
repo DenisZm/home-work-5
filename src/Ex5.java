@@ -19,8 +19,6 @@ public class Ex5 {
 
     static int[] bubbleSort(int[] arr) {
         boolean swap;
-        int counter = 0;
-        int step = 0;
         int length = arr.length;
         do {
             swap = false;
@@ -31,14 +29,10 @@ public class Ex5 {
                     arr[i] = t;
                     swap = true;
                 }
-                step++;
             }
-            System.out.print(step + " ");
             length--;
-            counter++;
-            step = 0;
         } while (swap);
-        System.out.println("Iteration: " + counter);
+
         return arr;
     }
 }
